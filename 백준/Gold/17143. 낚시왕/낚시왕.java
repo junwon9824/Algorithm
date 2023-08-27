@@ -1,10 +1,11 @@
  
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Main  {
+public class Main {
 
 	static point[][] arr;
 	static int min = Integer.MAX_VALUE;
@@ -157,7 +158,7 @@ public class Main  {
 					nr = p.r + dr[p.d];
 					nc = p.c + dc[p.d];
 					//p = new point(nr, nc, speed, p.d, p.z);
-					p.r = nr;
+					p.r = nr; //이거 위에거랑 밑에거 시간복잡도 차이 있음....
 					p.c = nc;
 					
 				}
