@@ -63,14 +63,9 @@ public class Main  {
 //				parent[a] = i;
 				union(a, i);
 			}
-
-//			for (int x : nodes[i])
-//				// System.out.print("nodes " + x);
-//				System.out.println();
+ 
 		}
-
-		// System.out.println(Arrays.toString(parent));
-		// System.out.println("sss");
+ 
 
 		int[] jo = new int[N + 1];
 		solve(1, jo);
