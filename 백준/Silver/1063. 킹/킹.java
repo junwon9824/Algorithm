@@ -6,10 +6,9 @@ import java.util.*;
 public class Main {
 	static String input;
 	static int[][] arr;
-	static int[] dr = { 0, 0, -1, 1, 1, 1, -1, -1 };
+	static int[] dr = { 0, 0, -1, 1, 1, 1, -1, -1 }; //위로갈수록 값이 증가하니 원래랑 반대로 부호 붙임.
 	static int[] dc = { 1, -1, 0, 0, 1, -1, 1, -1 };
-//	static String[] alldir = { "R", "L", "B", "T", "RT", "LT", "RB", "LB" };
-	static point king;
+ 	static point king;
 	static point rock;
 
 	public static void main(String[] args) throws IOException {
@@ -56,9 +55,7 @@ public class Main {
 
 		System.out.println((((king.c)) + "" + ((king.r))));
 		System.out.println(((rock.c) + "" + ((rock.r))));
- 		//System.out.println((char) ((king.r - 1) + 'A') + "" + king.c);
- 	//	System.out.println((char) ((rock.r - 1) + 'A') + "" + rock.c);
-
+ 	 
 	}
 
 	static void solve(String ch) {
@@ -73,7 +70,8 @@ public class Main {
 		if (ch.equals("R")) {
 			kingnext.r = (char) (king.r + dr[0]);
 			kingnext.c = (char) (king.c + dc[0]);
-			if (kingnext.r == rock.r && kingnext.c == rock.c) {
+			if (kingnext.r == rock.r && kingnext.c == rock.c) { //다음 킹좌표가 
+                //돌과 같으면 돌도 움직인다.
 				rocknext.r = (char) (rock.r + dr[0]);
 				rocknext.c = (char) (rock.c + dc[0]);
 			}
@@ -142,8 +140,7 @@ public class Main {
 		//System.out.println("rocknext" + rocknext.r + " " + rocknext.c);
 
 		if (isvalid(kingnext.r, kingnext.c) && isvalid(rocknext.r, rocknext.c)) {
-			//System.out.println("in");
-			king.r = kingnext.r;
+ 			king.r = kingnext.r;
 			king.c = kingnext.c;
 			rock.r = rocknext.r;
 			rock.c = rocknext.c;
