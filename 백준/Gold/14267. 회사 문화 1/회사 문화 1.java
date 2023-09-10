@@ -64,8 +64,7 @@ public class Main  {
 
 	static void dfs(int a) {
 		for (int i : list[a]) {
-			if (i == -1)
-				continue;
+		 
 			// System.out.println("i " + i + " " + w);
 			weight[i] += weight[a];
 			dfs(i);
