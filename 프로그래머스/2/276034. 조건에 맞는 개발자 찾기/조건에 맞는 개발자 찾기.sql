@@ -1,9 +1,5 @@
--- 코드를 작성해주세요
-select ID	, EMAIL	,FIRST_NAME	,LAST_NAME
-
-from DEVELOPERS d  
-
-where d.SKILL_CODE&(select code from SKILLCODES  where name='Python') or 
- d.SKILL_CODE&(select code from SKILLCODES  where name='C#')
-
-order by  ID asc
+SELECT ID, EMAIL, FIRST_NAME, LAST_NAME
+FROM DEVELOPERS d
+WHERE (d.SKILL_CODE & (SELECT code FROM SKILLCODES WHERE name='Python')) <> 0
+   OR (d.SKILL_CODE & (SELECT code FROM SKILLCODES WHERE name='C#')) <> 0
+ORDER BY ID ASC;
