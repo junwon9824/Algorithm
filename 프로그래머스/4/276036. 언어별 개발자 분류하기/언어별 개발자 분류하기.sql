@@ -35,7 +35,7 @@ d.SKILL_CODE & (select CODE from f  )
 from
 DEVELOPERS d
 
-HAVING
+having
   GRADE IS NOT NULL
 
 order by GRADE , ID asc
