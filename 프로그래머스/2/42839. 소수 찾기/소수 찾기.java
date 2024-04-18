@@ -21,13 +21,13 @@ class Solution {
     static void solve(int d,int cur,StringBuilder str){
         
         if(cur==d ){
+            
             if(!str.toString().equals("")&& sosu(Integer.valueOf(str.toString())) ){
                 // num++;
                 hs.add(Integer.valueOf(str.toString()));
                 System.out.println(str.toString());
             }
-                return;
-            
+            return;
         }
         
         for(int i=0;i<d ;i++)
@@ -38,8 +38,8 @@ class Solution {
                 visit[i]=false;
                 
             }
-        
         }
+        
         solve(d,cur+1,str);
 
     }
@@ -62,4 +62,5 @@ class Solution {
         return true;
         
     }
+    
 }
