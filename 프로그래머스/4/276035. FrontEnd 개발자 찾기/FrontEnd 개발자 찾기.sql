@@ -8,6 +8,6 @@ select ID
 from
 DEVELOPERS  d
 
-where SKILL_CODE &(select sum(code) code from SKILLCODES where category='Front End')>0 
+where SKILL_CODE &(select sum(code)   from SKILLCODES where category='Front End')>0 
 
 order by ID asc
