@@ -41,7 +41,7 @@ public class Main {
                 continue;
             }
 
-             for(int j=i;j<=b ;j++){
+             for(int j=i;j<=b ;j +=i){
                 int tmp=j;
                  
                 while( tmp%i==0 )  {
