@@ -44,23 +44,14 @@ class Main {
                 // System.out.println( );
             
         }
-        solve(0,carr);
+        solve(0,arr);
         
         System.out.println(cnt>0?"YES":"NO" );
         
     }
 
     static boolean check(  char [][]copy ){
- 
-        // for(int i=0;i<n ;i++){
-            
-        //     for(int j=0;j<n ;j++){
-        //         System.out.print(copy[i][j]);
-        //     }
-        //         System.out.println( );
-            
-        // }
-                // System.out.println( );
+  
         
         int size=t.size();
 
