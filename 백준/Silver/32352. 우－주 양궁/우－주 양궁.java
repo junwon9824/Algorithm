@@ -5,23 +5,23 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // 화살의 직육면체 정의
-        long Xlo = scanner.nextLong();
-        long Xhi = scanner.nextLong();
-        long Ylo = scanner.nextLong();
-        long Yhi = scanner.nextLong();
-        long Zlo = scanner.nextLong();
-        long Zhi = scanner.nextLong();
+        int Xlo = scanner.nextInt();
+        int Xhi = scanner.nextInt();
+        int Ylo = scanner.nextInt();
+        int Yhi = scanner.nextInt();
+        int Zlo = scanner.nextInt();
+        int Zhi = scanner.nextInt();
         
         // 과녁의 직육면체 정의
-        long xlo = scanner.nextLong();
-        long xhi = scanner.nextLong();
-        long ylo = scanner.nextLong();
-        long yhi = scanner.nextLong();
-        long zlo = scanner.nextLong();
-        long zhi = scanner.nextLong();
+        int xlo = scanner.nextInt();
+        int xhi = scanner.nextInt();
+        int ylo = scanner.nextInt();
+        int yhi = scanner.nextInt();
+        int zlo = scanner.nextInt();
+        int zhi = scanner.nextInt();
         
         // 충돌 여부 확인
-        long frame = -1;
+        int frame = -1;
 
         // x축 충돌 체크
         boolean xCollision = Math.max(Xlo, xlo) < Math.min(Xhi, xhi);
@@ -31,11 +31,11 @@ public class Main {
         // x축과 y축에서 충돌이 발생할 경우
         if (xCollision && yCollision) {
             // z축 충돌 체크
-            long t = 0;
+            int t = 0;
             while (true) {
                 
-                long currentZlo = Zlo - t;
-                long currentZhi = Zhi - t;
+                int currentZlo = Zlo - t;
+                int currentZhi = Zhi - t;
                 boolean Collision = Math.max(currentZlo, zlo) < Math.min(currentZhi, zhi);
 
                 // z축에서 충돌 여부
