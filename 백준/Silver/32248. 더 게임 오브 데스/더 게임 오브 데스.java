@@ -54,7 +54,7 @@ public class Main {
          
 
         T=T-start;
-        T=(long)T%cyclesize ;
+        T= T%cyclesize ;
         
       // System.out.println(  cyclesize+ " "+start  );
       // System.out.println(  T+start  );
