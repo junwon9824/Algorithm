@@ -58,7 +58,6 @@ public class Main {
                     }
                 }
                 
-                // dr, dc가 모두 0인 경우(자기 자신 한 칸)
                 int num = board[i][j] - '0';
                 
                 if(isPerfectSquare(num)) {
